@@ -167,3 +167,38 @@ print(frase.replace('a', '@'))
 frase = input('Digite uma frase: ')
 print(frase.replace('s', '$'))
 # ---
+# Q11 (PT): Peça ao usuário sua idade em anos e calcule quantos dias ele já viveu (aproximando cada ano como 365 dias).
+# Q11 (EN): Ask the user for their age in years and calculate how many days they have lived (approximating each year as 365 days).
+
+idade = int(input('Qual sua idade?: '))
+print(f'Com {idade}, você já viveu {idade*365} dias!')
+# ---
+# Q12 (PT): Peça ao usuário para inserir: salário mensal, gasto com alimentação, gasto com transporte, gasto com lazer.
+# Depois, calcule: total de gastos, saldo restante do salário, percentual do salário gasto em cada categoria.
+# Q12 (EN): Ask the user to input: monthly salary, spending on food, spending on transport, and spending on leisure.
+# Then, calculate: total expenses, remaining salary, percentage of salary spent on each category.
+
+sal_men = float(input('Qual o seu salário mensal?: '))
+gast_ali = float(input('Qual foi o seu gasto mensal com alimentação?: '))
+gast_tran = float(input('Qual foi o seu gasto com transporte?: '))
+gast_laz = float(input('Qual foi o seu gasto com lazer?: '))
+total = gast_ali+gast_tran+gast_laz
+restante = sal_men-total
+perc_gast_ali = (gast_ali / sal_men)*(100)
+perc_gast_tran = (gast_tran / sal_men)*(100) 
+perc_gast_laz = (gast_laz / sal_men)*(100) 
+print(f'O total de gastos do mês é: R${total:.2f}')
+print(f'O saldo restante do salário é: R${restante:.2f}')
+print(f'O percentual do salário gasto em cada categoria é igual a {perc_gast_ali:.2f}% em alimentação, {perc_gast_tran:.2f}% em transporte e {perc_gast_laz:.2f}% em lazer!')
+# ---
+# Q13 (PT): Peça ao usuário para informar uma distância em quilômetros. Depois, converta para metros e centímetros.
+# Q13 (EN): Ask the user to input a distance in kilometers. Then, convert it to meters and centimeters.
+
+quilog = float(input('Insira quantos quilômetros você percorreu: '))
+metros = quilog*1000
+cent = metros*100
+quilog_fmt = f"{quilog:,.0f}".replace(',', '.')
+metros_fmt = f"{metros:,.0f}".replace(',', '.')
+cent_fmt = f"{cent:,.0f}".replace(',', '.')
+print(f'Em {quilog_fmt} quilômetros você percorreu o equivalente a {metros_fmt} metros, justamente {cent_fmt} centímetros.')
+# ---
