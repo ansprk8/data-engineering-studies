@@ -375,28 +375,23 @@ elif cont == 'divisão':
     resultado = num1 / num2
 else:
     print('Operação inválida.')
-    resultado = None
 
-if resultado is not None:
-    # Inteiro ou decimal
-    if resultado % 1 == 0:
-        tipo = 'inteiro'
-    else:
-        tipo = 'decimal'
+if resultado % 1 == 0:
+    tipo = 'inteiro'
+else:
+    tipo = 'decimal'
 
-    # Positivo ou negativo
-    if resultado >= 0:
-        tipo2 = 'positivo'
-    else:
-        tipo2 = 'negativo'
+if resultado >= 0:
+    tipo2 = 'positivo'
+else:
+    tipo2 = 'negativo'
 
-    # Par ou ímpar
-    if resultado % 2 == 0:
-        tipo3 = 'par'
-    else:
-        tipo3 = 'ímpar'
+if resultado % 2 == 0:
+    tipo3 = 'par'
+else:
+    tipo3 = 'ímpar'
 
-    print(f'''O resultado de sua {cont} é igual a: {resultado}.
+print(f'''O resultado de sua {cont} é igual a: {resultado}.
 O resultado é um número {tipo}, {tipo2} e {tipo3}.''')
 # ---
 # Q11 (PT): Peça três valores que representam os lados de um triângulo e determine
