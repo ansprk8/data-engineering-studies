@@ -233,4 +233,190 @@ elif percen < 0:
     print('O percentual tem porcentagem negativa!')
 else:
     print('Não houve crescimento ou decrescimento!')
+# ---
+# Q3 (PT): Leia uma letra e determine se é vogal ou consoante.
+# Q3 (EN): Read a letter and determine whether it is a vowel or a consonant.
 
+letra = input('Escolha uma letra: ').lower()
+vogais = 'aeiou'
+
+if letra in vogais:
+    print('Sua letra é uma vogal')
+else:
+    print('Sua letra é uma consoante')
+# ---
+# Q4 (PT): Leia valores médios de preços de um carro em 3 anos e exiba o maior e o menor.
+# Q4 (EN): Read average car prices for 3 consecutive years and display the highest and lowest.
+
+ano1 = float(input('Qual foi o valor médio do carro no primeiro ano?: '))
+ano2 = float(input('Qual foi o valor médio do carro no segundo ano?: '))
+ano3 = float(input('Qual foi o valor médio do carro no terceiro ano?: '))
+
+maior_p = ano1
+if ano2 > maior_p:
+    maior_p = ano2
+if ano3 > maior_p:
+    maior_p = ano3
+
+menor_p = ano1
+if ano2 < menor_p:
+    menor_p = ano2
+if ano3 < menor_p:
+    menor_p = ano3
+
+print(f'O maior preço foi de R${maior_p}')
+print(f'O menor preço foi de R${menor_p}')
+# ---
+# Q5 (PT): Pergunte o preço de três produtos e indique o mais barato.
+# Q5 (EN): Ask for the price of three products and indicate which one is the cheapest.
+
+prod_1 = float(input('Qual o valor do primeiro produto?: '))
+prod_2 = float(input('Qual o valor do segundo produto?: '))
+prod_3 = float(input('Qual o valor do terceiro produto?: '))
+
+if prod_1 < prod_2 and prod_1 < prod_3:
+    print('O primeiro produto é o mais barato')
+elif prod_2 < prod_1 and prod_2 < prod_3:
+    print('O segundo produto é o mais barato')
+elif prod_3 < prod_1 and prod_3 < prod_2:
+    print('O terceiro produto é o mais barato')
+elif prod_1 == prod_2 == prod_3:
+    print('Os três produtos têm o mesmo preço')
+else:
+    if prod_1 == prod_2:
+        print('O primeiro e o segundo produto são os mais baratos')
+    elif prod_2 == prod_3:
+        print('O segundo e o terceiro produto são os mais baratos')
+    elif prod_3 == prod_1:
+        print('O primeiro e o terceiro produto são os mais baratos')
+# ---
+# Q6 (PT): Leia três números e os exiba em ordem decrescente.
+# Q6 (EN): Read three numbers and display them in descending order.
+
+num1 = int(input('Qual o primeiro número?: '))
+num2 = int(input('Qual o segundo número?: '))
+num3 = int(input('Qual o terceiro número?: '))
+
+if num1 >= num2 and num1 >= num3:
+    print(num1)
+    if num2 >= num3:
+        print(num2)
+        print(num3)
+    else:
+        print(num3)
+        print(num2)
+elif num2 >= num1 and num2 >= num3:
+    print(num2)
+    if num1 >= num3:
+        print(num1)
+        print(num3)
+    else:
+        print(num3)
+        print(num1)
+else:
+    print(num3)
+    if num1 >= num2:
+        print(num1)
+        print(num2)
+    else:
+        print(num2)
+        print(num1)
+# ---
+# Q7 (PT): Pergunte em qual turno a pessoa estuda e exiba a saudação correspondente.
+# Q7 (EN): Ask what shift the user studies in and display the appropriate greeting.
+
+turno = input('Qual turno você estuda, manhã/tarde/noite?: ').lower()
+
+if turno == 'manhã':
+    print('Bom dia!')
+elif turno == 'tarde':
+    print('Boa tarde!')
+elif turno == 'noite':
+    print('Boa noite!')
+else:
+    print('Valor inválido!')
+# ---
+# Q8 (PT): Peça um número inteiro e determine se ele é par ou ímpar.
+# Q8 (EN): Ask for an integer and determine whether it is even or odd.
+
+num = int(input('Diga um número inteiro: '))
+
+if num % 2 == 0:
+    print('Seu número é par')
+else:
+    print('Seu número é ímpar')
+# ---
+# Q9 (PT): Peça um número e informe se ele é inteiro ou decimal.
+# Q9 (EN): Ask for a number and inform whether it is an integer or decimal.
+
+num = float(input('Diga-me um número: '))
+
+if num % 1 == 0:
+    print('Seu número é inteiro')
+else:
+    print('Seu número é decimal')
+# ---
+# Q10 (PT): Leia dois números, solicite a operação desejada e exiba o resultado,
+# incluindo se é par/ímpar, positivo/negativo e inteiro/decimal.
+# Q10 (EN): Read two numbers, ask for the desired operation, and display the result,
+# including whether it is even/odd, positive/negative, and integer/decimal.
+
+num1 = float(input('Qual o primeiro número que agirá com o segundo? '))
+num2 = float(input('Ótimo. Agora, qual o segundo número?: '))
+cont = input('Qual operação você deseja realizar? (adição, subtração, multiplicação ou divisão?): ')
+
+if cont == 'adição':
+    resultado = num1 + num2
+elif cont == 'subtração':
+    resultado = num1 - num2
+elif cont == 'multiplicação':
+    resultado = num1 * num2
+elif cont == 'divisão':
+    resultado = num1 / num2
+else:
+    print('Operação inválida.')
+    resultado = None
+
+if resultado is not None:
+    # Inteiro ou decimal
+    if resultado % 1 == 0:
+        tipo = 'inteiro'
+    else:
+        tipo = 'decimal'
+
+    # Positivo ou negativo
+    if resultado >= 0:
+        tipo2 = 'positivo'
+    else:
+        tipo2 = 'negativo'
+
+    # Par ou ímpar
+    if resultado % 2 == 0:
+        tipo3 = 'par'
+    else:
+        tipo3 = 'ímpar'
+
+    print(f'''O resultado de sua {cont} é igual a: {resultado}.
+O resultado é um número {tipo}, {tipo2} e {tipo3}.''')
+# ---
+# Q11 (PT): Peça três valores que representam os lados de um triângulo e determine
+# se formam um triângulo e qual o tipo: equilátero, isósceles ou escaleno.
+# Q11 (EN): Ask for three values representing triangle sides and determine
+# whether they form a triangle and which type it is: equilateral, isosceles, or scalene.
+
+num1 = float(input('Diga-me um número que representa o lado de um triângulo: '))
+num2 = float(input('Agora, o segundo número: '))
+num3 = float(input('Ótimo, agora o terceiro e último: '))
+
+if (num1 + num2 > num3) and (num1 + num3 > num2) and (num2 + num3 > num1):
+
+    if num1 == num2 == num3:
+        tipo = 'equilátero'
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        tipo = 'isósceles'
+    else:
+        tipo = 'escaleno'
+
+    print(f'Seu triângulo é um triângulo {tipo}.')
+else:
+    print('Não se há um triângulo.')
