@@ -415,3 +415,46 @@ if (num1 + num2 > num3) and (num1 + num3 > num2) and (num2 + num3 > num1):
     print(f'Seu triângulo é um triângulo {tipo}.')
 else:
     print('Não se há um triângulo.')
+# ---
+# Q12 (PT): Um estabelecimento está vendendo combustíveis com descontos variados.
+# Para o etanol, se a quantidade comprada for até 15 litros, o desconto será de 2% por litro. 
+# Caso contrário, será de 4% por litro. 
+# Para o diesel, se a quantidade comprada for até 15 litros, o desconto será de 3% por litro. 
+# Caso contrário, será de 5% por litro. 
+# O preço do litro de diesel é R$ 2,00 e o preço do litro de etanol é R$ 1,70. 
+# Escreva um programa que leia a quantidade de litros vendidos e o tipo de combustível 
+# (E para etanol e D para diesel) e calcule o valor a ser pago pelo cliente.
+
+# Q12 (EN): A fuel station is selling fuels with different discounts.
+# For ethanol, if the purchased amount is up to 15 liters, the discount will be 2% per liter. 
+# Otherwise, it will be 4% per liter. 
+# For diesel, if the purchased amount is up to 15 liters, the discount will be 3% per liter. 
+# Otherwise, it will be 5% per liter. 
+# Diesel price per liter is R$ 2.00 and ethanol price per liter is R$ 1.70. 
+# Write a program that reads the number of liters sold and the type of fuel 
+# (E for ethanol and D for diesel) and calculates the total amount to be paid.
+
+combu = str(input('Qual o combustível? (E para Etanol e D para diesel): ')).upper()
+litros = float(input('Qual a quantidade de litros?: '))
+preco_etanol = 1.70
+preco_diesel = 2.00
+
+if combu == 'E':
+  preco_litro = preco_etanol
+  if litros <= 15:
+    desconto = 0.02
+  else:
+    desconto = 0.04
+
+elif combu == 'D':
+  preco_litro = preco_diesel
+  if litros <= 15:
+    desconto = 0.03
+  else:
+    desconto = 0.05
+else:
+  print('Combustível Inválido.')
+  exit()
+
+preco_total = litros * preco_litro * (1 - desconto)
+print(f'Total a pagar: R${preco_total:.2f}')
