@@ -458,3 +458,36 @@ else:
 
 preco_total = litros * preco_litro * (1 - desconto)
 print(f'Total a pagar: R${preco_total:.2f}')
+# ---
+# Q13 (PT): Em uma empresa de venda de imóveis você precisa criar um código que analise os dados de vendas anuais
+# para ajudar a diretoria na tomada de decisão. O código precisa coletar os dados de quantidade de vendas durante
+# os anos de 2022 e 2023 e fazer um cálculo de variação percentual. A partir do valor da variação, deve ser enviada
+# às seguintes sugestões:
+# - Para variação acima de 20%: bonificação para o time de vendas.
+# - Para variação entre 2% e 20%: pequena bonificação para o time de vendas.
+# - Para variação entre 2% e -10%: planejamento de políticas de incentivo às vendas.
+# - Para bonificações abaixo de -10%: corte de gastos.
+
+# Q13 (EN): In a real estate sales company, you need to create a code that analyzes annual sales data
+# to help management make decisions. The code must collect sales data for 2022 and 2023 and calculate
+# the percentage variation. Based on the variation value, the following suggestions should be given:
+# - Variation above 20%: bonus for the sales team.
+# - Variation between 2% and 20%: small bonus for the sales team.
+# - Variation between 2% and -10%: plan sales incentive policies.
+# - Variation below -10%: cost-cutting measures.
+
+qnt_ven22 = int(input('Qual foi a quantidade de vendas durante o ano de 2022?: '))
+qnt_ven23 = int(input('Qual foi a quantidade de vendas durante o ano de 2023?: '))
+variac = (qnt_ven23 - qnt_ven22) / qnt_ven22 * 100
+if variac > 20:
+  resultado = 'boa bonificação para o time de vendas.'
+elif 2 < variac <= 20:
+  resultado = 'pequena bonificação para o time de vendas.'
+elif -10 < variac < 2:
+  resultado = 'planejamento de políticas de incentivo às vendas.'
+else:
+  resultado = 'corte de gastos.'
+
+print(f'''A variação percentual entre 2022 e 2023 é igual a: {variac:.2f}%.
+Logo, o resultado é que haverá um(a) {resultado}''')
+# ---
