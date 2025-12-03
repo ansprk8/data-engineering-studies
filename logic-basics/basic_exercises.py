@@ -201,4 +201,36 @@ quilog_fmt = f"{quilog:,.0f}".replace(',', '.')
 metros_fmt = f"{metros:,.0f}".replace(',', '.')
 cent_fmt = f"{cent:,.0f}".replace(',', '.')
 print(f'Em {quilog_fmt} quilômetros você percorreu o equivalente a {metros_fmt} metros, justamente {cent_fmt} centímetros.')
+
+
+
+# ==================================================
+# Aquecendo na Programação
+# Warming Up in Programming
+
+# ==================================================
+# Q1 (PT): Peça dois números ao usuário e exiba qual deles é maior.
+# Q1 (EN): Ask the user for two numbers and display which one is greater.
+
+num1 = int(input('Qual o primeiro número?: '))
+num2 = int(input('Qual o segundo número?: '))
+
+if num1 > num2:
+    print(f'O maior número entre {num1} e {num2} é: {num1}')
+elif num2 > num1:
+    print(f'O maior número entre {num1} e {num2} é: {num2}')
+else:
+    print('Os dois números são iguais')
 # ---
+# Q2 (PT): Solicite o percentual de crescimento e informe se é positivo, negativo ou nulo.
+# Q2 (EN): Ask for the growth percentage and state whether it is positive, negative, or zero.
+
+percen = float(input('Qual o percentual de crescimento de produção da empresa?: '))
+
+if percen > 0:
+    print('O percentual tem porcentagem positiva!')
+elif percen < 0:
+    print('O percentual tem porcentagem negativa!')
+else:
+    print('Não houve crescimento ou decrescimento!')
+
