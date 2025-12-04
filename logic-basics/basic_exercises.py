@@ -512,4 +512,20 @@ elif inicio > fim:
     print(i)
 else:
     print('Os números são iguais.')
+# ---
+# Q2 (PT): Calcule quantos dias a colônia da bactéria A (4 elementos, +3% ao dia)
+# levará para ultrapassar ou igualar a colônia B (10 elementos, +1,5% ao dia).
 
+# Q2 (EN): Calculate how many days it takes for bacteria colony A (4 elements, +3% daily)
+# to surpass or equal colony B (10 elements, +1.5% daily).
+
+colonia_a = 4
+colonia_b = 10
+taxa_a = 0.03
+taxa_b = 0.015
+dias = 0
+while colonia_a <= colonia_b:
+  colonia_a *= 1+taxa_a
+  colonia_b *= 1+taxa_b
+  dias += 1
+print(f'Demorará {dias} dias para a bactéria A ultrapassar a bactéria B.')
