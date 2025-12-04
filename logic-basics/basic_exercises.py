@@ -529,3 +529,17 @@ while colonia_a <= colonia_b:
   colonia_b *= 1+taxa_b
   dias += 1
 print(f'Demorará {dias} dias para a bactéria A ultrapassar a bactéria B.')
+# ---
+# Q3 (PT): Receba 15 notas de 0 a 5 e valide cada entrada. 
+# Se a nota for menor que 0 ou maior que 5, peça novamente até ser válida.
+
+# Q3 (EN): Receive 15 ratings from 0 to 5 and validate each input. 
+# If the rating is below 0 or above 5, ask again until it is valid.
+
+for i in range(5):
+  nota = float(input(f'Insira a nota da pessoa número {i}: '))
+
+  while (nota < 0) or (nota > 5):
+      nota = float(input(f'Nota inutilizável, insira novamente a nota da pessoa número {i}: '))
+
+print('Verificação aceita. Todas as notas são válidas e utilizáveis.')
