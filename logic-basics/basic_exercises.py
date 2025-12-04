@@ -491,3 +491,25 @@ else:
 print(f'''A variação percentual entre 2022 e 2023 é igual a: {variac:.2f}%.
 Logo, o resultado é que haverá um(a) {resultado}''')
 # ---
+
+
+
+# ==================================================
+# Estruturas de Repetição – Intervalos Numéricos
+# Repetition Structures – Numeric Ranges
+
+# ==================================================
+# Q1 (PT): Peça dois números inteiros e imprima todos os números inteiros entre eles.
+# Q1 (EN): Ask for two integers and print all the integers between them.
+
+inicio = int(input('Diga-me um número inteiro: '))
+fim = int(input('Insira agora outro número inteiro: '))
+if inicio < fim:
+    for i in range(inicio + 1, fim):
+        print(i)
+elif inicio > fim:
+  for i in range(fim + 1, inicio):
+    print(i)
+else:
+    print('Os números são iguais.')
+
