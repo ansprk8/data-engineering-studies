@@ -543,3 +543,57 @@ for i in range(5):
       nota = float(input(f'Nota inutilizável, insira novamente a nota da pessoa número {i}: '))
 
 print('Verificação aceita. Todas as notas são válidas e utilizáveis.')
+# ---
+# Q4 (PT): Leia várias temperaturas em Celsius e calcule a média. Encerre ao receber -273.
+# Q4 (EN): Read several Celsius temperatures and compute the average. Stop when -273 is entered.
+
+temp = int(input('Informe-me uma temperatura em graus celsius: '))
+contadora = 0
+soma = 0
+
+while temp != -273:
+  soma += temp
+  contadora += 1
+  temp = int(input('Informe-me uma temperatura em graus celsius: '))
+
+media = soma / contadora
+
+print(f'A média entre as temperaturas é: {media}.')
+# ---
+# Q5 (PT): Calcule o fatorial de um número inteiro fornecido pela pessoa usuária.
+# Q5 (EN): Calculate the factorial of an integer provided by the user.
+
+num = int(input('Informe-me um número inteiro: '))
+fat = 1
+i = num
+
+while i > 0:
+  fat *= i
+  i -= 1
+
+print(f'O fatorial de {num} é igual a {fat}.')
+# ---
+# Q6 (PT): Gere a tabuada de 1 a 10 para um número escolhido pela pessoa usuária.
+# Q6 (EN): Generate the multiplication table from 1 to 10 for a chosen number.
+
+num = int(input('Diga-me um número inteiro: '))
+i = num
+
+for i in range(1, 11):
+  print(f'''A tabuada do número {num}, é igual a:
+{num} x {i} = {num * i}''')
+# ---
+# Q7 (PT): Determine se um número inteiro é primo.
+# Q7 (EN): Determine whether an integer is prime.
+
+num = int(input('Diga-me um número inteiro: '))
+
+if num > 1:
+    for i in range(2, num):
+        if num % i == 0:
+            print('Esse número não é primo')
+            exit()
+    print('Esse número é primo')
+else:
+    print('Esse número não é primo')
+# ---
