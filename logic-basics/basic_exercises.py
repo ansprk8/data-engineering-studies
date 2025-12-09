@@ -4,7 +4,7 @@
 
 # ==================================================
 # Q1 (PT): Solicite o nome do usuário e imprima "Olá, [nome]!"
-# Q1 (EN): Ask the user for their name and print "Hello, [name]!"
+# Q1 (EN): Ask the user for their name and print "Hello, [name]"
 
 nome = input('Digite seu nome: ')
 print(f'Olá, {nome}!')
